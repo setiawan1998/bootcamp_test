@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Data JSON Asli :
+	<div id="div1" style="background-color: #0f9;">
+
+	</div>
+	<br>
+	Data JSON Setelah di convert ke string :
+	<div id="div2" style="background-color: #09f;">
+
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	function data(){
+		var data_json = {"itemId":"12341822","itemName":"FGX Flannel Shirt","price":195000,"availableColorAndSize":[{"color":"blue-black","size":["M","L","XL"]},{"color":"black-white","size":["L"]}],"freeShiping":false};
+
+		return data_json;
+	}
+	console.log(data());
+	document.getElementById('div1').innerHTML=data();
+	document.getElementById('div2').innerHTML=JSON.stringify(data());
+</script>
